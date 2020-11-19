@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Chat</title>
+	<style>
+	button {
+      background-color:orange;
+      color:#fff;
+    }
+
+    input {
+	 background-color: black;
+		color: aqua;
+    }
+		#command {
+      background-color:#fff;
+            
+        }
+
+    .tampil {
+      background-color:#fff;
+      color:#333;  
+    }
+	</style>
+</head>
+
+<body>
+	<main>
+		<div>
+			<textarea class="tampil" style="background-color: cyan" disabled></textarea>
+			<br>
+			<input type="text" class="input">
+			<button class="kirim" onClick="aksi()">Kirim</button>
+			</br>
+		</div>
+	</main>
+	<marquee><footer>
+		<br>Nama : MUHAMMAD FARHAN<br>
+		<br>NIM  : 0110220079  </br>
+	</footer></marquee>
+	<script>
+	let resultchat = document.querySelector(".tampil");
+	const inputchat = document.querySelector(".input");
+	const kirimchat = document.querySelector(".kirim");
+	const tampilchat = document.querySelector(".tampil");
+		function aksi(){
+			resultchat.innerHTML = resultchat.innerHTML + "pesan: " + inputchat.value + "\n"; inputchat.value="";
+		}
+	</script>
+</body>
+</html>
